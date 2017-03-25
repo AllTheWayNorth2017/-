@@ -93,7 +93,7 @@ function classStusListQuery($classid)
   preg_match($pattern,$string,$result);
   $result=str_replace(array('<tbody>','</tbody>','/'), '', $result);
   $result=explode('<tr>', $result[0]);
-  $conn = new PDO("mysql:host=localhost;dbname=homework",'root','');
+  $conn = new PDO("",'','');
   $conn -> setAttribute(PDO::ATTR_ERRMODE , PDO::ERRMODE_EXCEPTION);
   for ($i=0,$j=0,$StuInfo=array(); $i <count($result) ; $i++)
   { 
