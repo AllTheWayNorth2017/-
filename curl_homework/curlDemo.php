@@ -76,23 +76,24 @@
 
 /*function classStusListQuery($classid)
 {*/
-/*  $url = 'http://jwzx.cqupt.congm.in/jwzxtmp/showBjStu.php?bj='.$classid;*/
-  $url="http://jwc.cqupt.edu.cn/weixin/search.php";
-  $useragent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36";
+  $classid='2016210049';
+  $url = 'http://jwzx.cqupt.edu.cn/jwzxtmp/showBjStu.php?bj='.$classid;
+/*  $url="http://jwc.cqupt.edu.cn/weixin/search.php";*/
+/*  $useragent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36";*/
   $ch = curl_init();
-  $arr=array(
+/*  $arr=array(
     'action'=>'kebiao',
     'searchKebiaoKey'=>'2016210049',
     'kebiaoTarget'=>'student'
-    );
+    );*/
   $opt =  array(
             CURLOPT_URL => $url,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_FOLLOWLOCATION  => TRUE,
-            CURLOPT_USERAGENT => $useragent,
-/*            CURLOPT_RETURNTRANSFER => 1*/
-            CURLOPT_POSTFIELDS=>http_build_query($arr),
-            CURLOPT_COOKIE=>'PHPSESSID=3cm0e191inpv3p95n8d27fgpu0; PHPSESSID=3cm0e191inpv3p95n8d27fgpu0; UM_distinctid=15b70f76f6d35e-0273548bbb3f1a-57e1b3c-144000-15b70f76f6e5ae'
+/*            CURLOPT_USERAGENT => $useragent,*/
+/*            CURLOPT_RETURNTRANSFER => 1,*/
+/*            CURLOPT_POSTFIELDS=>http_build_query($arr),*/
+/*            CURLOPT_COOKIE=>'PHPSESSID=3cm0e191inpv3p95n8d27fgpu0; PHPSESSID=3cm0e191inpv3p95n8d27fgpu0; UM_distinctid=15b70f76f6d35e-0273548bbb3f1a-57e1b3c-144000-15b70f76f6e5ae'*/
           );
   curl_setopt_array($ch, $opt);
   $output = curl_exec($ch);
